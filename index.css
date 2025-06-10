@@ -1,0 +1,337 @@
+/* index.css */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+}
+
+body {
+  background: linear-gradient(to right, rgb(0, 0, 14), rgb(12, 12, 159));
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(to right, rgb(0, 0, 14), rgb(12, 12, 159));
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navdiv {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.logo a {
+  font-size: 30px;
+  font-weight: 700;
+  color: azure;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li a {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 8px 15px;
+  border-radius: 30px;
+  background: rgba(255 255 255 / 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+  background: rgba(255 255 255 / 0.3);
+}
+
+.resume-button {
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 30px;
+  border: 2px solid aliceblue;
+  color: aliceblue;
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover,
+.resume-button:focus {
+  background-color: aliceblue;
+  color: rgb(0, 0, 14);
+  text-decoration: none;
+}
+
+/* Buttons (used as links) */
+.btn-primary {
+  display: inline-block;
+  padding: 10px 25px;
+  margin-top: 20px;
+  background: linear-gradient(to right, rgb(0, 0, 14), rgb(12, 12, 159));
+  color: white;
+  border: 2px solid aliceblue;
+  border-radius: 50px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: aliceblue;
+  color: rgb(0, 0, 14);
+  text-decoration: none;
+}
+
+/* Sections */
+.bg-section,
+.bg-section1,
+.contact-section {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  color: white;
+}
+
+/* Home Section */
+.bg-section {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.typewriter {
+  color: #01288a;
+  -webkit-text-stroke: 1.2px white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 1000;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 25px;
+  width: 0;
+  animation: typing 2.5s steps(100, end) forwards;
+  margin: 0 auto;              /* Horizontally center */
+  display: block;              /* Required for margin auto */
+  text-align: center;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 26ch; }  /* Adjust based on your text length */
+}
+
+
+/* About Section */
+.bg-section1 {
+  background: linear-gradient(to right, rgb(0, 0, 14), rgb(12, 12, 159));
+  min-height: 80vh;
+  color: rgb(243, 244, 248);
+}
+
+.head {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: aliceblue;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 25px;
+  margin: 0 auto 30px;
+  background-color: rgba(255 255 255 / 0.1);
+}
+
+/* About box grid */
+.about-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 0 15px;
+}
+
+.about-box img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.about-text {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: aliceblue;
+}
+
+/* Skills Section */
+.skills {
+  background: linear-gradient(to right, rgb(0, 0, 14), rgb(12, 12, 159));
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+}
+
+.box1 {
+  background-color: aliceblue;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  color: black;
+  text-align: center;
+}
+
+.box1:hover {
+  transform: scale(1.05);
+}
+
+.box1 img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.box1 h3 {
+  font-weight: 600;
+  color: #01288a; /* ✅ Dark blue that contrasts with light background */
+    text-align: center;
+}
+
+/* Contact Section */
+.contact-section {
+  background: linear-gradient(to right, rgb(0, 0, 14), rgb(12, 12, 159));
+  color: aliceblue;
+  padding-top: 60px;
+}
+
+.contact__form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__input {
+  font-size: 1rem;
+  padding: 12px 15px;
+  border-radius: 6px;
+  border: 1.5px solid aliceblue;
+  margin-bottom: 20px;
+  background: transparent;
+  color: white;
+}
+
+.contact__input::placeholder {
+  color: #ddd;
+}
+
+.contact__button {
+  background: aliceblue;
+  color: rgb(0, 0, 14);
+  border: none;
+  padding: 12px 20px;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact__button:hover,
+.contact__button:focus {
+  background-color: rgb(21, 4, 110);
+  color: aliceblue;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .about-box {
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+  }
+
+  .about-text {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .typewriter {
+    font-size: 1.
+  }
+}
+
+section {
+  padding: 60px 20px;   /* top/bottom 60px, left/right 20px */
+  margin-bottom: 60px;  /* space between sections */
+}
+/* Hamburger menu icon (hidden by default) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  border-radius: 5px;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background: rgba(0, 0, 30, 0.95);
+    border-radius: 10px;
+    padding: 15px;
+    z-index: 999;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
